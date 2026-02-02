@@ -31,7 +31,11 @@ def transform_weather_data(raw_data):
             "measurement_time": datetime.fromisoformat(record["timestamp"]),
             "temperature_c": record["temperature"],
             "humidity": record["humidity"],
+            "weather_main": record["weather_main"],
+            "weather_desc": record["weather_desc"],
+            "wind_speed": record["wind_speed"],
         })
+
 
     return cities, measurements
 
